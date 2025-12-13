@@ -1,0 +1,179 @@
+@font-face {
+    font-family: ReemKufi;
+    src: url(../FONTS/ReemKufiInk-Regular.ttf);
+}
+
+@font-face {
+    font-family: SourceCode;
+    src: url(../FONTS/SourceCodePro-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../FONTS/RobotoSlab-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../IMG/BackgroundIMG.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header */
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(5px);
+    clear: both;
+}
+
+/* Logo */
+
+.logo {
+    float: left;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-family: ReemKufi;
+    font-size: 40px;
+    clear: both;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo a span {
+    color: red;
+}
+
+.logo a:visited {
+    color: white;
+}
+
+/* NavBar */
+
+nav {
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 80px;
+    font-family: SourceCode;
+    font-size: 1.15em;
+    transition: .5s;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: red;
+    transition: .5s;
+}
+
+nav #active {
+    color: red;
+    transition: .5s;
+}
+
+nav a .icon {
+    width: 25px;
+    height: 25px;
+}
+
+.icon {
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 5px;
+}
+
+/* Section*/
+
+img {
+    margin-top: 50px;
+    margin-left: 41.2%;
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px black;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 40px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.info .desc {
+    margin-top: 10px;
+}
+
+.info .desc p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info .desc p span {
+    text-decoration: underline;
+    margin-top: 10px;
+    font-family: ReemKufi;
+    font-size: 25px;
+    color: red;
+}
+
+
+
+.info .btn {
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    font-size: 15px;
+    font-family: SourceCode;
+    color: white;
+    transition: .6s;
+}
+
+.info .btn:hover {
+    cursor: pointer;
+    color: red;
+    backdrop-filter: blur(5px);
+    border: 1px solid red;
+    border-radius: 3px;
+    background-color: rgba(100, 100, 100, 0.1);
+    transition: .6s;
+}
+
+/* footer */
+
+.foot {
+    height: 35px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: RobotoSlab;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+}

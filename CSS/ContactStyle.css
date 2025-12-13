@@ -1,0 +1,297 @@
+@font-face {
+    font-family: ReemKufi;
+    src: url(../FONTS/ReemKufiInk-Regular.ttf);
+}
+
+@font-face {
+    font-family: SourceCode;
+    src: url(../FONTS/SourceCodePro-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: RobotoSlab;
+    src: url(../FONTS/RobotoSlab-Light.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../IMG/BackgroundIMG.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Logo */
+
+.logo {
+    float: left;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-family: ReemKufi;
+    font-size: 40px;
+    clear: both;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo a span {
+    color: red;
+}
+
+.logo a:visited {
+    color: white;
+}
+
+/* NavBar */
+
+nav {
+    float: right;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 80px;
+    font-family: SourceCode;
+    font-size: 1.15em;
+    transition: .5s;
+    color: white;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: red;
+    transition: .5s;
+}
+
+nav #active {
+    color: red;
+    transition: .5s;
+}
+
+nav a .icon {
+    width: 25px;
+    height: 25px;
+}
+
+.icon {
+    position: absolute;
+    margin-top: -3px;
+    margin-left: 5px;
+}
+
+nav a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: red;
+    border-radius: 5px;
+    transform-origin: right;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* Section */
+
+.ic img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .contenu {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contenu h2 {
+    font-size: 46px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.contact .contenu p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.contact .contenu p span {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.conteneur {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:  50px;
+}
+
+.conteneur .infoContact {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.conteneur .infoContact .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.conteneur .infoContact .box .ic {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.conteneur .infoContact .box .texte {
+    display: flex;
+    margin-left: 20px;
+    font-size: 23px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.conteneur .infoContact .box .texte h3 {
+    font-weight: 500;
+    color: #ff0000;
+    font-family: ReemKufi;
+}
+
+.conteneur .infoContact .box .texte p {
+    font-family: RobotoSlab;
+}
+
+.conteneur .infoContact .box .texte p:hover {
+    cursor: pointer;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 40px;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+    font-family: RobotoSlab;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contactForm.inputBox input,
+.contactForm.inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    background-color: rgba(100, 100, 100, 0.1);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.contactForm .inputBox span {
+    padding: 5px 0;
+    font-size: 21px;
+    margin: 10px 0;
+    color: #fff;
+    font-family: RobotoSlab;
+}
+
+.contactForm .inputBox textarea {
+    background-color: rgba(100, 100, 100, 0.1);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* footer */
+
+.foot {
+    height: 40px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: RobotoSlab;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
